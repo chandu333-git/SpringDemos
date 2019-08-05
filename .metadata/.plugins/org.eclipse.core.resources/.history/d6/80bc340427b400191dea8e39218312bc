@@ -1,0 +1,25 @@
+package com.employee.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.employee.model.Employee;
+import com.employee.repository.EmployeeRepository;
+
+@Controller
+public class EmployeeController {
+	
+@RequestMapping("/")
+	public String addEmployee(Model model)
+	{
+	return "index";
+	}
+public String saveEmployee(@RequestParam String code, @RequestParam String name)
+{
+	Employee employee=new Employee();
+	employee.setCode(code);
+	employee.setName(name);
+	EmployeeRepository repo=new EmployeeRepository();
+	}
+}

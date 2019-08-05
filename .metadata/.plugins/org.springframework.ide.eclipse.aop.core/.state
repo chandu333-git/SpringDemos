@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="springDemo2"/>
+<aop-project name="springDemo3"/>
+<aop-project name="springdemo"/>
+<aop-project name="KeepNote-Step1-Boilerplate"/>
+<aop-project name="mvcspringDemo1"/>
+<aop-project name="mvcspringDemo2"/>
+<aop-project name="mvcspringDemo3"/>
+</aop-reference-model>

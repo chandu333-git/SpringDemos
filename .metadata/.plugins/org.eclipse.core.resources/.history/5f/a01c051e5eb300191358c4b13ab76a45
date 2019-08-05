@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="emp1" class="com.cgi.model.Employee">
+<property name="id" value="1"/>
+<property name="name" value="Inner Enggineering"/>
+<property name="desig" value="Sadhguru"/>
+<property name="address" value="addr1"/>
+   </bean>
+   
+   
+<bean id="addr1" class="com.cgi.model.Address">
+<property name="hno" value="2"/>
+<property name="street" value="Men from Mars and Women from venus"/>
+<property name="city" value="John Gray"/>
+   </bean>
+</beans>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="NoteRepositoryTest" project="KeepNote-Step1-Boilerplate" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.stackroute.keepnote.test.NoteRepositoryTest" time="0.001">
+    <testcase name="testAddNote" classname="com.stackroute.keepnote.test.NoteRepositoryTest" time="0.001"/>
+    <testcase name="testGetAllNotes" classname="com.stackroute.keepnote.test.NoteRepositoryTest" time="0.0"/>
+    <testcase name="testDeleteNote" classname="com.stackroute.keepnote.test.NoteRepositoryTest" time="0.0"/>
+  </testsuite>
+</testrun>

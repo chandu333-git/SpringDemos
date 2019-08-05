@@ -1,0 +1,5 @@
+package com.cgi.annotationbaseconfigDemo1;
+
+public class Address {
+
+}

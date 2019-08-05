@@ -1,0 +1,37 @@
+package com.cgi.jdbcdemo1;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Main4 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Scanner scan=new Scanner(System.in);
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection connection=null;
+		try
+		{
+		connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","cgi123");
+		//below statement holds the SQL statement 
+		Statement statement=connection.createStatement();
+		System.out.println("ENTER THE CODE");
+		int code=scan.nextInt();
+		System.out.println("ENTER THE NAME");
+		String name=scan.next();
+		String sql=("DELETE FROM employee WHERE code='"+code+"' name='"+name+"'");
+		System.out.println(sql);
+		int n=statement.executeUpdate(sql);
+	if(n>0)
+		{
+		System.out.println("Record insert Successfully");
+	}
+	}finally
+	{
+		connection.close();
+	}
+}}

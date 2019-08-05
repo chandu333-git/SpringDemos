@@ -1,0 +1,47 @@
+package com.cgi.controller;
+
+import java.util.List;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import com.cgi.model.Employee;
+import com.cgi.repository.EmployeeRepo;
+
+@Controller
+public class EmployeeController {
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+	   EmployeeRepo repo = (EmployeeRepo) context.getBean("emprepo");
+	   @RequestMapping("/")
+	   public String addEmployee(Model model) {
+	       List<Employee> empList = repo.displayEmployees();
+	       model.addAttribute("emplist", empList);
+	       return "index";
+	   }
+	   @RequestMapping("/saveEmployee")
+	   public String saveEmployee(@RequestParam String code, @RequestParam String name,Model model) {
+	       Employee emp = new Employee();
+	       emp.setCode(code);
+	       emp.setName(name);
+	       model.addAttribute("empList", repo.displayEmployees());
+	       repo.addEmployee(emp);
+	       return "index";
+	   }
+	   @RequestMapping("/deleteEmployee")
+	   public String deleteEmployee(@RequestParam String code,Model model) {
+	       repo.deleteEmployee(code);
+	       model.addAttribute("empList",repo.displayEmployees());
+	       return "index";
+	   }
+	   @RequestMapping("/updateEmployee")
+	   public String updateEmployee(@RequestParam String code,Model model) {
+	       Employee emp = new Employee();
+	       emp.setCode(code);
+	       repo.updateEmployee(code,name);
+	       model.addAttribute("empList",repo.displayEmployees());
+	       return "index";
+	   }
+}

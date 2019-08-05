@@ -1,0 +1,7 @@
+package com.cgi.Assignment_1;
+
+public class Employee {
+private String code;
+private String name;
+
+}

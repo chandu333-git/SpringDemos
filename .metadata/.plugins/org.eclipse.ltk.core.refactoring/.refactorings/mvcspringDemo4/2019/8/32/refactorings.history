@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.employee.repository.EmployeeRepository&apos; to &apos;EmployeeRepo&apos;&#x0D;&#x0A;- Original project: &apos;mvcspringDemo4&apos;&#x0D;&#x0A;- Original element: &apos;com.employee.repository.EmployeeRepository&apos;&#x0D;&#x0A;- Renamed element: &apos;com.employee.repository.EmployeeRepo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EmployeeRepository&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.employee.repository{EmployeeRepository.java[EmployeeRepository" matchStrategy="1" name="EmployeeRepo" qualified="false" references="true" similarDeclarations="false" stamp="1565001514118" textual="false" version="1.0"/>
+</session>

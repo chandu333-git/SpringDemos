@@ -1,0 +1,31 @@
+package com.cgi.main;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.cgi.model.Employee;
+import com.cgi.repo.EmployeeRepo;
+
+public class Main {
+
+	public static void main(String[] args) {
+	    ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+	    EmployeeRepo repo=(EmployeeRepo) context.getBean("emprepo");
+	    Employee emp=(Employee) context.getBean("employee");
+	    Scanner scanner=new Scanner(System.in);
+	    System.out.println("Enter the code");
+	    String code=scanner.next();
+	    System.out.println("Enter the name");
+	    String name=scanner.next();
+	    System.out.println("Enter the choice to be required");
+	    emp.setCode(code);
+	    emp.setName(name);
+	    boolean b=repo.addEmployee(emp);
+	    if(b==true) {
+	    	System.out.println("Records are added");
+	    }
+	}
+
+}

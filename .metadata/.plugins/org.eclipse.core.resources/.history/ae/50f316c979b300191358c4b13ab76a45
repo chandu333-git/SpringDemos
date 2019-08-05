@@ -1,0 +1,12 @@
+package com.cgi.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+public class HelloController {
+
+	public String message(Model mmodel)
+	{
+		model.addAttribute("messgage"  , "I love you 3000s");
+		return "I love you 3000";
+	}
+}

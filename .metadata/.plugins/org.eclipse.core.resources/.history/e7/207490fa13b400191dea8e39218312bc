@@ -1,0 +1,30 @@
+package com.cgi;
+
+import java.util.*;
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+	Scanner scan=new Scanner(System.in);
+	ArrayList<Employee> empList =new ArrayList<Employee>();
+	String ans="yes";
+	   String nm;
+	   Employee emp=new Employee();
+	   ArrayList<String> names=new ArrayList<String>();
+	   while(ans.equals("yes"))
+	    {
+	      System.out.println("Enter name");
+	      nm=scan.next();
+	      names.add(nm);
+	      System.out.println("Do you want to continue?");
+	      ans=scan.next();
+	    }
+	    emp.setList(names);
+	    names=emp.getList();
+	    for(String name : names)
+	     {
+	        System.out.println(name);
+	     }
+	  }
+	}
+
+}

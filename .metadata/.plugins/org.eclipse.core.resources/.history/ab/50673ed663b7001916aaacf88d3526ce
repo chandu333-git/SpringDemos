@@ -1,0 +1,5 @@
+package com.cgi.repo;
+
+public class EmployeeMapper {
+
+}

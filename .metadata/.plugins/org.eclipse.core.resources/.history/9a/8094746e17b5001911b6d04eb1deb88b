@@ -1,0 +1,9 @@
+package com.cgi.Assignment_1;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class EmployeeRepository1 {
+	private Connection connection=null;
+	private PreparedStatement statement=connection.prepareStatement();
+}

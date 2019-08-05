@@ -1,0 +1,71 @@
+package com.cgi.Assignment_1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+public class EmployeeRepository {
+   private Connection connection;
+     private PreparedStatement statement;
+   public EmployeeRepository(){
+       try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+             connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","cgi123");
+        } catch (ClassNotFoundException e) {
+          
+            e.printStackTrace();
+        } catch (SQLException e) {
+           
+            e.printStackTrace();
+        }
+   }
+      public boolean addEmployee(Employee employee) {
+    	  Scanner scan=new Scanner(System.in);
+    	  boolean a=false;
+          try {
+           String sql="insert into emp values(?,?)";
+           System.out.println("ENTER THE CODE");
+   		int code=scan.nextInt();
+   		System.out.println("ENTER THE NAME");
+   		String name=scan.next();
+   		
+            
+            PreparedStatement statement=connection.prepareStatement(sql);
+            statement.setInt(1,code);
+    		statement.setString(2,name);
+    		System.out.println(sql);
+            a=true;
+            int n=statement.executeUpdate();
+            
+           }catch(SQLException e) {
+               System.out.println(e);
+           }
+          
+     
+    	  
+    	  
+        return a;
+      }
+        
+        public boolean deleteEmployee(String code) {
+      	  
+      	  boolean b=false;
+            try {
+             String sql="DELETE FROM emp WHERE values(?,?)";
+          
+              
+              PreparedStatement statement=connection.prepareStatement(sql);
+              b=true;
+            
+             }catch(SQLException e) {
+                 System.out.println(e);
+             }
+            
+       
+      	  
+      	  
+          return b;
+          
+}
+      }

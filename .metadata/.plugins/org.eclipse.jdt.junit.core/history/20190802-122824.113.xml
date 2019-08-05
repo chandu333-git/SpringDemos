@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="NoteControllerTest" project="KeepNote-Step1-Boilerplate" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.stackroute.keepnote.test.NoteControllerTest" time="0.584">
+    <testcase name="testAddNote" classname="com.stackroute.keepnote.test.NoteControllerTest" time="0.398"/>
+    <testcase name="testGetAllNotes" classname="com.stackroute.keepnote.test.NoteControllerTest" time="0.043"/>
+    <testcase name="testAddNoteEmptyStatusFailure" classname="com.stackroute.keepnote.test.NoteControllerTest" time="0.039"/>
+    <testcase name="testAddNoteEmptyContentFailure" classname="com.stackroute.keepnote.test.NoteControllerTest" time="0.045"/>
+    <testcase name="testAddNoteEmptyTitleFailure" classname="com.stackroute.keepnote.test.NoteControllerTest" time="0.035"/>
+    <testcase name="testDeleteNote" classname="com.stackroute.keepnote.test.NoteControllerTest" time="0.023"/>
+  </testsuite>
+</testrun>
